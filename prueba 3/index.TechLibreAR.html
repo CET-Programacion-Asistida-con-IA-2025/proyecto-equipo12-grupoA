@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLearn - Cursos Tecnológicos Gratuitos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.TechLibreAR.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 TechLibreAR</h1>
+            <p class="subtitle">Historias que inspiran. Cursos que abren puertas. Comunidad que no te suelta.</p>
+            
+            <div class="carousel-container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" class="d-block w-100" alt="Oportunidades tecnológicas">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="news-badge">🚀 Oportunidades</div>
+                    <h5>500 becas tech para jóvenes</h5>
+                    <p>Nueva convocatoria para cursos gratuitos que cambiarán tu futuro profesional</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80" class="d-block w-100" alt="Startup exitosa">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="news-badge">🌟 Éxito</div>
+                    <h5>Startup creada por autodidactas</h5>
+                    <p>Emprendedores que se formaron online recaudan $2M en inversión</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" alt="Curso de programación">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="news-badge">📚 Nuevo Curso</div>
+                    <h5>Curso de Programación Web</h5>
+                    <p>Comienza el 1 de agosto. ¡Inscríbete ahora y transforma tu carrera!</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+     </div>
+    </div>
+                
+            <div class="stats-mini">
+                <div class="stat-mini">
+                    <div class="stat-number">1,240</div>
+                    <div class="stat-label">Cursos Disponibles</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab('courses')">🔍 Buscar Cursos</button>
+            <button class="tab-btn" onclick="showTab('forum')">💬 Comunidad</button>
+            <button class="tab-btn" onclick="showTab('news')">📰 Noticias Inspiradoras</button>
+        </div>
+
+        <!-- Tab: Buscar Cursos -->
+        <div id="courses" class="tab-content active">
+            <div class="search-section">
+                <h2>🔍 Encuentra tu curso ideal</h2>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="area">Área Temática</label>
+                        <select id="area">
+                            <option value="">Todas las áreas</option>
+                            <option value="programacion">Programación</option>
+                            <option value="diseno">Diseño</option>
+                            <option value="ia">Inteligencia Artificial</option>
+                            <option value="datos">Ciencia de Datos</option>
+                            <option value="marketing">Marketing Digital</option>
+                            <option value="ciberseguridad">Ciberseguridad</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="tipo">Tipo de Curso</label>
+                        <select id="tipo">
+                            <option value="">Todos los tipos</option>
+                            <option value="sincronico">Sincrónico (En vivo)</option>
+                            <option value="asincronico">Asincrónico (A tu ritmo)</option>
+                            <option value="presencial">Presencial</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="search-btn" onclick="searchCourses()">Buscar Cursos</button>
+            </div>
+
+            <div class="courses-grid" id="coursesGrid">
+                <div class="course-card">
+                    <div class="course-type">Asincrónico</div>
+                    <div class="course-title">Fundamentos de Python</div>
+                    <div class="course-org">Fundación Código Libre</div>
+                    <p>Aprende programación desde cero con Python. Ideal para principiantes.</p>
+                    <p><strong>Inicio:</strong> Disponible ahora</p>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-type">Sincrónico</div>
+                    <div class="course-title">Diseño UX/UI</div>
+                    <div class="course-org">Universidad Tech</div>
+                    <p>Diseña experiencias digitales increíbles. Incluye proyectos reales.</p>
+                    <p><strong>Inicio:</strong> 15 de Julio</p>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-type">Presencial</div>
+                    <div class="course-title">Introducción a IA</div>
+                    <div class="course-org">Centro de Innovación</div>
+                    <p>Descubre el mundo de la inteligencia artificial y machine learning.</p>
+                    <p><strong>Inicio:</strong> 22 de Julio</p>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-type">Asincrónico</div>
+                    <div class="course-title">Marketing Digital</div>
+                    <div class="course-org">Fundación Emprendedores</div>
+                    <p>Domina las estrategias de marketing en el mundo digital.</p>
+                    <p><strong>Inicio:</strong> Disponible ahora</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Comunidad -->
+        <div id="forum" class="tab-content">
+            <h2>💬 Comunidad TechLearn</h2>
+            <button class="add-post-btn" onclick="addPost()">+ Nueva Consulta</button>
+            
+            <div class="search-section">
+                <input type="text" placeholder="Buscar en la comunidad..." style="width: 100%; margin-bottom: 15px;">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label>Filtrar por tema</label>
+                        <select>
+                            <option>Todos los temas</option>
+                            <option>Programación</option>
+                            <option>Diseño</option>
+                            <option>Carrera profesional</option>
+                            <option>Proyectos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-post">
+                <div class="post-title">¿Cómo conseguir mi primer trabajo en tech?</div>
+                <div class="post-meta">Por Ana García • hace 2 horas • 15 respuestas</div>
+                <p>Hola comunidad! Acabo de terminar un bootcamp de desarrollo web y estoy buscando mi primera oportunidad laboral. ¿Qué consejos me dan?</p>
+                <div class="post-tags">
+                    <span class="tag">carrera</span>
+                    <span class="tag">programación</span>
+                    <span class="tag">primer-empleo</span>
+                </div>
+            </div>
+
+            <div class="forum-post">
+                <div class="post-title">Compartiendo mi proyecto: App de finanzas personales</div>
+                <div class="post-meta">Por Carlos Mendez • hace 5 horas • 8 respuestas</div>
+                <p>¡Hola! Quiero compartir con ustedes mi primer proyecto grande. Es una app para manejar finanzas personales. ¿Qué opinan?</p>
+                <div class="post-tags">
+                    <span class="tag">proyecto</span>
+                    <span class="tag">javascript</span>
+                    <span class="tag">feedback</span>
+                </div>
+            </div>
+
+            <div class="forum-post">
+                <div class="post-title">¿Python o JavaScript para empezar?</div>
+                <div class="post-meta">Por María López • hace 1 día • 23 respuestas</div>
+                <p>Soy completamente nueva en programación. He visto que tanto Python como JavaScript son buenos para empezar. ¿Cuál recomiendan?</p>
+                <div class="post-tags">
+                    <span class="tag">principiante</span>
+                    <span class="tag">python</span>
+                    <span class="tag">javascript</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Noticias -->
+        <div id="news" class="tab-content">
+            <h2>📰 Historias que Inspiran</h2>
+            <p style="margin-bottom: 30px; color: #666;">Descubre cómo la tecnología está transformando vidas y comunidades alrededor del mundo.</p>
+
+            <div class="news-article">
+                <div class="news-title">De camarera a desarrolladora: La historia de transformación de Sofia</div>
+                <div class="news-summary">
+                    Sofia trabajaba como camarera en Buenos Aires cuando decidió cambiar su vida. Aprovechando los cursos gratuitos de programación, hoy trabaja como desarrolladora full-stack en una startup internacional. "Nunca pensé que podría aprender a programar, pero los cursos gratuitos me dieron la oportunidad que necesitaba", cuenta Sofia.
+                </div>
+                <div class="news-date">Publicado hace 2 días</div>
+            </div>
+
+            <div class="news-article">
+                <div class="news-title">Jóvenes mexicanos crean app que ayuda a agricultores rurales</div>
+                <div class="news-summary">
+                    Un grupo de estudiantes que se formó a través de cursos gratuitos de desarrollo móvil creó una aplicación que conecta a pequeños agricultores con mercados urbanos, eliminando intermediarios y aumentando sus ingresos en un 40%. La tecnología como herramienta de inclusión social.
+                </div>
+                <div class="news-date">Publicado hace 4 días</div>
+            </div>
+
+            <div class="news-article">
+                <div class="news-title">Fundación lanza 500 becas para cursos de IA en comunidades vulnerables</div>
+                <div class="news-summary">
+                    La Fundación Futuro Digital anunció un programa para democratizar el acceso a la educación en inteligencia artificial. "Creemos que la IA debe ser una herramienta de oportunidad para todos, no solo para unos pocos privilegiados", expresó la directora del programa.
+                </div>
+                <div class="news-date">Publicado hace 1 semana</div>
+            </div>
+
+            <div class="news-article">
+                <div class="news-title">Abuela de 70 años se convierte en diseñadora web</div>
+                <div class="news-summary">
+                    Carmen, de 70 años, decidió aprender diseño web durante la pandemia. Hoy tiene su propio estudio de diseño y dice: "La edad es solo un número cuando tienes ganas de aprender. Los cursos online me permitieron estudiar a mi ritmo y ahora tengo una nueva pasión".
+                </div>
+                <div class="news-date">Publicado hace 1 semana</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.TechLibreAR.js"></script>
+</body>
+</html>
